@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url(img/ramadan.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.5);
+  z-index: -1;
+}
+
+.countdown-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.countdown-box {
+  background-color: #686142;
+  color: #122d2f;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 85px;
+}
+
+.countdown-item {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.countdown-label {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.content {
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.content h1 {
+  font-size: 3em;
+  color: #686142;
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2em;
+  }
+  .countdown-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .countdown-item {
+    font-size: 28px;
+  }
+  .countdown-label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.5em;
+  }
+  .countdown-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .countdown-item {
+    font-size: 24px;
+  }
+  .countdown-label {
+    font-size: 12px;
+  }
+}
